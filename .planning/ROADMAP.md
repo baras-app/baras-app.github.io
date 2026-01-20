@@ -29,12 +29,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Site is readable on mobile with hamburger menu navigation
   4. Search box exists and finds content across documentation
   5. Code blocks have copy-to-clipboard buttons
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 01-01: Astro + Starlight project setup with Tailwind
-- [ ] 01-02: GitHub Actions deployment pipeline
-- [ ] 01-03: UX features (dark mode, mobile layout, search, copy buttons)
+- [ ] 01-01-PLAN.md — Initialize Astro + Starlight with navigation structure
+- [ ] 01-02-PLAN.md — GitHub Actions deployment to GitHub Pages
+- [ ] 01-03-PLAN.md — Theme customization and UX feature verification
 
 ### Phase 2: Landing & Downloads
 **Goal**: Users can discover BARAS, understand its value, and download it for their platform
