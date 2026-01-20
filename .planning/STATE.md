@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-01-19)
 
 **Core value:** Non-technical SWTOR players can discover, download, and learn BARAS without touching GitHub.
-**Current focus:** Phase 1 - Foundation
+**Current focus:** Phase 2 - Landing & Downloads
 
 ## Current Position
 
-Phase: 1 of 4 (Foundation)
-Plan: 3 of 3 in current phase
-Status: Phase complete
-Last activity: 2026-01-20 - Completed 01-03-PLAN.md (Starlight theme and UX)
+Phase: 2 of 4 (Landing & Downloads)
+Plan: 0 of 3 in current phase
+Status: Ready to plan
+Last activity: 2026-01-20 — Phase 1 complete, verified
 
-Progress: [###-------] 25% (3/12 plans)
+Progress: [###-------] 25% (3/10 plans)
 
 ## Performance Metrics
 

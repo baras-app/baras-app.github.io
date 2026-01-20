@@ -12,7 +12,7 @@ This roadmap transforms BARAS from a GitHub-only project into a polished documen
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation** - Astro + Starlight setup, GitHub Pages deployment, UX foundations
+- [x] **Phase 1: Foundation** - Astro + Starlight setup, GitHub Pages deployment, UX foundations
 - [ ] **Phase 2: Landing & Downloads** - Marketing landing page with hero, platform downloads, installation guides
 - [ ] **Phase 3: Core Documentation** - Quickstart guide, metrics reference, overlays reference, FAQ
 - [ ] **Phase 4: Extended Documentation** - Timers, alerts, effects, and configuration reference docs (scaffolded)
@@ -32,9 +32,9 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 3 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Initialize Astro + Starlight with navigation structure
-- [ ] 01-02-PLAN.md — GitHub Actions deployment to GitHub Pages
-- [ ] 01-03-PLAN.md — Theme customization and UX feature verification
+- [x] 01-01-PLAN.md — Initialize Astro + Starlight with navigation structure
+- [x] 01-02-PLAN.md — GitHub Actions deployment to GitHub Pages
+- [x] 01-03-PLAN.md — Theme customization and UX feature verification
 
 ### Phase 2: Landing & Downloads
 **Goal**: Users can discover BARAS, understand its value, and download it for their platform
@@ -90,7 +90,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/3 | Not started | - |
+| 1. Foundation | 3/3 | ✓ Complete | 2026-01-20 |
 | 2. Landing & Downloads | 0/3 | Not started | - |
 | 3. Core Documentation | 0/3 | Not started | - |
 | 4. Extended Documentation | 0/1 | Not started | - |

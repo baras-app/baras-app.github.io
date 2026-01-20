@@ -39,16 +39,16 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### User Experience
 
-- [ ] **UX-01**: Dark mode toggle (persists preference, respects system setting)
-- [ ] **UX-02**: Mobile responsive layout (hamburger menu, readable on phones)
-- [ ] **UX-03**: Search functionality across documentation
-- [ ] **UX-04**: Copy-to-clipboard buttons on code blocks and paths
+- [x] **UX-01**: Dark mode toggle (persists preference, respects system setting)
+- [x] **UX-02**: Mobile responsive layout (hamburger menu, readable on phones)
+- [x] **UX-03**: Search functionality across documentation
+- [x] **UX-04**: Copy-to-clipboard buttons on code blocks and paths
 
 ### Infrastructure
 
-- [ ] **INFRA-01**: Static site built with Astro + Starlight
-- [ ] **INFRA-02**: GitHub Pages deployment via GitHub Actions
-- [ ] **INFRA-03**: Image optimization pipeline (WebP, lazy loading)
+- [x] **INFRA-01**: Static site built with Astro + Starlight
+- [x] **INFRA-02**: GitHub Pages deployment via GitHub Actions
+- [x] **INFRA-03**: Image optimization pipeline (WebP, lazy loading)
 
 ## v2 Requirements
 
@@ -104,13 +104,13 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DOCS-05 | Phase 4 | Pending |
 | DOCS-06 | Phase 4 | Pending |
 | FAQ-01 | Phase 3 | Pending |
-| UX-01 | Phase 1 | Pending |
-| UX-02 | Phase 1 | Pending |
-| UX-03 | Phase 1 | Pending |
-| UX-04 | Phase 1 | Pending |
-| INFRA-01 | Phase 1 | Pending |
-| INFRA-02 | Phase 1 | Pending |
-| INFRA-03 | Phase 1 | Pending |
+| UX-01 | Phase 1 | Complete |
+| UX-02 | Phase 1 | Complete |
+| UX-03 | Phase 1 | Complete |
+| UX-04 | Phase 1 | Complete |
+| INFRA-01 | Phase 1 | Complete |
+| INFRA-02 | Phase 1 | Complete |
+| INFRA-03 | Phase 1 | Complete |
 
 **Coverage:**
 - v1 requirements: 22 total
@@ -119,4 +119,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-01-19*
-*Last updated: 2026-01-20 after roadmap creation*
+*Last updated: 2026-01-20 after Phase 1 completion*
