@@ -46,12 +46,12 @@ Plans:
   3. User can click platform-specific download button (Windows/macOS/Linux) and download starts
   4. Download buttons show current version number pulled from GitHub Releases API
   5. User can find and follow installation instructions for their platform (including macOS quarantine, Linux NVIDIA workaround)
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 02-01: Landing page with hero and visuals
-- [ ] 02-02: Downloads with GitHub Releases API integration
-- [ ] 02-03: Platform-specific installation guides
+- [ ] 02-01-PLAN.md — Landing page with hero section and screenshot carousel
+- [ ] 02-02-PLAN.md — Download section with GitHub Releases API integration
+- [ ] 02-03-PLAN.md — Platform-specific installation guides
 
 ### Phase 3: Core Documentation
 **Goal**: New users can get BARAS running and understand its most-used features
@@ -90,8 +90,8 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 3/3 | ✓ Complete | 2026-01-20 |
-| 2. Landing & Downloads | 0/3 | Not started | - |
+| 1. Foundation | 3/3 | Complete | 2026-01-20 |
+| 2. Landing & Downloads | 0/3 | Planned | - |
 | 3. Core Documentation | 0/3 | Not started | - |
 | 4. Extended Documentation | 0/1 | Not started | - |
 
