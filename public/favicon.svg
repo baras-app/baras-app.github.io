@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Sith mask placeholder for BARAS -->
+  <defs>
+    <linearGradient id="maskGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4aa"/>
+      <stop offset="100%" style="stop-color:#008b8b"/>
+    </linearGradient>
+  </defs>
+  <!-- Mask outline -->
+  <path d="M16 2C10 2 5 8 5 14v8c0 4 3 8 7 8h8c4 0 7-4 7-8v-8c0-6-5-12-11-12z" fill="url(#maskGrad)"/>
+  <!-- Eye slots -->
+  <ellipse cx="11" cy="14" rx="3" ry="2" fill="#1a1a2e"/>
+  <ellipse cx="21" cy="14" rx="3" ry="2" fill="#1a1a2e"/>
+  <!-- Breathing vents -->
+  <rect x="9" y="22" width="4" height="2" rx="1" fill="#1a1a2e"/>
+  <rect x="14" y="22" width="4" height="2" rx="1" fill="#1a1a2e"/>
+  <rect x="19" y="22" width="4" height="2" rx="1" fill="#1a1a2e"/>
+</svg>
