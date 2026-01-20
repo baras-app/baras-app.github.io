@@ -1,0 +1,102 @@
+---
+title: Installation
+description: How to install BARAS on Windows, macOS, or Linux
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+BARAS is available for Windows, macOS, and Linux. Choose your platform below for installation instructions.
+
+## Download
+
+Visit the [download section](/#downloads) on the homepage to get the latest version for your platform.
+
+## Installation Steps
+
+<Tabs syncKey="platform">
+  <TabItem label="Windows" icon="seti:windows">
+    ### Windows Installation
+
+    1. Download `BARAS_x64-setup.exe` from the download section
+    2. Run the installer
+    3. Follow the installation wizard
+    4. Launch BARAS from the Start Menu or desktop shortcut
+
+    :::note
+    Windows may show a SmartScreen warning for unsigned apps. Click "More info" then "Run anyway" to proceed.
+    :::
+  </TabItem>
+
+  <TabItem label="macOS" icon="apple">
+    ### macOS Installation
+
+    1. Download `BARAS_aarch64.dmg` (Apple Silicon) from the download section
+    2. Open the DMG file
+    3. Drag BARAS to the Applications folder
+    4. Close the DMG window
+
+    :::caution[Gatekeeper Warning]
+    macOS blocks unsigned apps by default. If you see "BARAS cannot be opened because it is from an unidentified developer":
+
+    **Option 1: Right-click method**
+    1. Right-click (or Control-click) the BARAS app in Applications
+    2. Select "Open" from the menu
+    3. Click "Open" in the dialog
+
+    **Option 2: Terminal command**
+    ```bash
+    xattr -dr com.apple.quarantine /Applications/BARAS.app
+    ```
+    Then open BARAS normally.
+    :::
+  </TabItem>
+
+  <TabItem label="Linux" icon="linux">
+    ### Linux Installation
+
+    1. Download `BARAS_amd64.AppImage` from the download section
+    2. Make the file executable:
+       ```bash
+       chmod +x BARAS_*.AppImage
+       ```
+    3. Run the AppImage:
+       ```bash
+       ./BARAS_*.AppImage
+       ```
+
+    :::tip[Desktop Integration]
+    For a desktop menu entry, you can use AppImageLauncher or create a `.desktop` file manually.
+    :::
+
+    :::caution[NVIDIA GPU Users]
+    If you see a blank/white window, this is a known WebKitGTK issue with NVIDIA drivers. Run with:
+
+    ```bash
+    WEBKIT_DISABLE_DMABUF_RENDERER=1 ./BARAS_*.AppImage
+    ```
+
+    For a permanent fix, create a `.desktop` file with this environment variable:
+    ```ini
+    [Desktop Entry]
+    Name=BARAS
+    Exec=env WEBKIT_DISABLE_DMABUF_RENDERER=1 /path/to/BARAS.AppImage
+    Type=Application
+    Categories=Game;Utility;
+    ```
+    :::
+  </TabItem>
+</Tabs>
+
+## First Launch
+
+After installation, launch BARAS. On first run:
+
+1. BARAS will prompt you to select your SWTOR combat log directory
+2. The default location is:
+   - **Windows:** `Documents\Star Wars - The Old Republic\CombatLogs`
+   - **macOS/Linux:** Check your SWTOR installation directory
+
+3. Enable combat logging in SWTOR if not already enabled:
+   - In-game: Preferences > Combat Logging > Enable Combat Logging
+
+See the [Quickstart Guide](/guides/quickstart/) for detailed setup instructions.
