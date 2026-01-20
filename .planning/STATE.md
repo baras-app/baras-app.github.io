@@ -12,27 +12,27 @@ See: .planning/PROJECT.md (updated 2026-01-19)
 Phase: 2 of 4 (Landing & Downloads)
 Plan: 1 of 3 in current phase
 Status: In progress
-Last activity: 2026-01-20 — Completed 02-03-PLAN.md
+Last activity: 2026-01-20 — Completed 02-01-PLAN.md
 
-Progress: [####------] 40% (4/10 plans)
+Progress: [#####-----] 50% (5/10 plans)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 4
-- Average duration: 6.3 min
-- Total execution time: 25 min
+- Total plans completed: 5
+- Average duration: 5.6 min
+- Total execution time: 28 min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-foundation | 3 | 23 min | 7.7 min |
-| 02-landing-downloads | 1 | 2 min | 2.0 min |
+| 02-landing-downloads | 2 | 5 min | 2.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (4 min), 01-02 (7 min), 01-03 (12 min), 02-03 (2 min)
-- Trend: Installation guide completed quickly (verification-focused)
+- Last 5 plans: 01-02 (7 min), 01-03 (12 min), 02-03 (2 min), 02-01 (3 min)
+- Trend: Phase 2 plans executing quickly (UI-focused, no complex integrations)
 
 *Updated after each plan completion*
 
@@ -53,6 +53,8 @@ Recent decisions affecting current work:
 - [01-03]: Keep theme toggle functional for accessibility
 - [02-03]: Renamed .md to .mdx for Starlight component imports
 - [02-03]: syncKey="platform" for persistent tab selection across navigation
+- [02-01]: Pure CSS scroll-snap carousel - no JavaScript library needed
+- [02-01]: Dual SVG storage (src/assets + public/) for Astro Image and URL references
 
 ### Pending Todos
 
@@ -64,6 +66,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-01-20 09:18 UTC
-Stopped at: Completed 02-03-PLAN.md
+Last session: 2026-01-20 09:19 UTC
+Stopped at: Completed 02-01-PLAN.md
 Resume file: None
