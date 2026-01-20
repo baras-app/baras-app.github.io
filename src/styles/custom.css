@@ -24,3 +24,20 @@
   --sl-color-accent: #0891b2;
   --sl-color-accent-high: #083344;
 }
+
+/* Landing page hero enhancements */
+.hero {
+  padding-bottom: 1rem;
+}
+
+/* Screenshot carousel section styling */
+.sl-markdown-content h2:has(+ .carousel-container),
+.sl-markdown-content h2 + .carousel-container {
+  margin-top: 0;
+}
+
+/* Downloads section anchor styling */
+#downloads {
+  scroll-margin-top: 5rem;
+  min-height: 1px;
+}

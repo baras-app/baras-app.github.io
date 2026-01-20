@@ -3,35 +3,30 @@ title: Welcome to BARAS
 description: Battle Analysis and Raid Assessment System - A combat log parser for SWTOR.
 template: splash
 hero:
-  tagline: Battle Analysis and Raid Assessment System for Star Wars - The Old Republic
+  title: Real-time Combat Analysis for SWTOR
+  tagline: Native. Fast. Cross-platform. The combat log parser that keeps up with your gameplay.
+  image:
+    file: ../../assets/screenshots/overlay-placeholder.svg
+    alt: BARAS overlay showing DPS meters during raid combat
   actions:
-    - text: Get Started
-      link: /getting-started/installation/
-      icon: right-arrow
+    - text: Download
+      link: '#downloads'
+      icon: down-caret
+      variant: primary
     - text: View on GitHub
       link: https://github.com/baras-app/baras
-      icon: external
+      icon: github
       variant: minimal
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
-import { Image } from 'astro:assets';
-import placeholderImage from '../../assets/images/placeholder.svg';
+import ScreenshotCarousel from '../../components/ScreenshotCarousel.astro';
 
-## What is BARAS?
+## See BARAS in Action
 
-BARAS is a combat log parser and overlay application for Star Wars: The Old Republic. It provides real-time combat analysis, damage/healing meters, and raid assessment tools.
+<ScreenshotCarousel />
 
-## Quick Example
-
-```toml
-# Example BARAS config
-[overlay]
-enabled = true
-```
-
-{/* Image optimization test - demonstrates Astro Image component with lazy loading */}
-<Image src={placeholderImage} alt="BARAS placeholder - demonstrates image optimization" />
+## Features
 
 <CardGrid stagger>
 	<Card title="Easy Installation" icon="laptop">
@@ -47,3 +42,7 @@ enabled = true
 		Works on Windows, macOS, and Linux.
 	</Card>
 </CardGrid>
+
+<div id="downloads">
+  {/* Download section will be added in Plan 02-02 */}
+</div>
