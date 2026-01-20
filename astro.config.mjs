@@ -10,6 +10,7 @@ export default defineConfig({
 			title: 'BARAS',
 			description: 'Battle Analysis and Raid Assessment System',
 			favicon: '/favicon.svg',
+			customCss: ['./src/styles/custom.css'],
 			social: [
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/baras-app/baras' },
 			],

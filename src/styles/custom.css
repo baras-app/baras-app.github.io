@@ -1,0 +1,26 @@
+/* BARAS brand colors */
+:root {
+  /* Teal/cyan accent */
+  --sl-color-accent-low: #083344;
+  --sl-color-accent: #0891b2;
+  --sl-color-accent-high: #22d3ee;
+
+  /* Gold/tan for branding highlights */
+  --sl-color-white: #fafaf9;
+  --sl-color-gray-1: #e7e5e4;
+  --sl-color-gray-2: #d6d3d1;
+  --sl-color-gray-3: #a8a29e;
+  --sl-color-gray-4: #78716c;
+  --sl-color-gray-5: #57534e;
+  --sl-color-gray-6: #292524;
+
+  /* Dark charcoal background */
+  --sl-color-black: #1c1917;
+}
+
+/* Dark mode as default - invert for light mode */
+:root[data-theme='light'] {
+  --sl-color-accent-low: #cffafe;
+  --sl-color-accent: #0891b2;
+  --sl-color-accent-high: #083344;
+}
