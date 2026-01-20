@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-01-19)
 ## Current Position
 
 Phase: 1 of 4 (Foundation)
-Plan: 1 of 3 in current phase
+Plan: 2 of 3 in current phase
 Status: In progress
-Last activity: 2026-01-20 - Completed 01-01-PLAN.md (Astro + Starlight init)
+Last activity: 2026-01-20 - Completed 01-02-PLAN.md (GitHub Pages deployment)
 
-Progress: [#---------] 8% (1/12 plans)
+Progress: [##--------] 17% (2/12 plans)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 1
-- Average duration: 4 min
-- Total execution time: 4 min
+- Total plans completed: 2
+- Average duration: 5.5 min
+- Total execution time: 11 min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 01-foundation | 1 | 4 min | 4 min |
+| 01-foundation | 2 | 11 min | 5.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (4 min)
-- Trend: Baseline established
+- Last 5 plans: 01-01 (4 min), 01-02 (7 min)
+- Trend: Consistent quick execution
 
 *Updated after each plan completion*
 
@@ -46,6 +46,8 @@ Recent decisions affecting current work:
 - [Roadmap]: 4 phases for quick depth, framework-first approach
 - [01-01]: Used slug format in sidebar for cleaner internal routing
 - [01-01]: Created Sith mask SVG favicon with teal gradient for BARAS branding
+- [01-02]: GitHub Actions pages artifact pattern for deployment (modern approach)
+- [01-02]: Node 20 LTS + npm ci for reproducible CI builds
 
 ### Pending Todos
 
@@ -57,6 +59,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-01-20 08:34 UTC
-Stopped at: Completed 01-01-PLAN.md
+Last session: 2026-01-20 08:43 UTC
+Stopped at: Completed 01-02-PLAN.md
 Resume file: None
