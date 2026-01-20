@@ -15,6 +15,8 @@ hero:
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+import placeholderImage from '../../assets/images/placeholder.svg';
 
 ## What is BARAS?
 
@@ -27,6 +29,9 @@ BARAS is a combat log parser and overlay application for Star Wars: The Old Repu
 [overlay]
 enabled = true
 ```
+
+{/* Image optimization test - demonstrates Astro Image component with lazy loading */}
+<Image src={placeholderImage} alt="BARAS placeholder - demonstrates image optimization" />
 
 <CardGrid stagger>
 	<Card title="Easy Installation" icon="laptop">
