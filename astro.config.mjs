@@ -11,6 +11,10 @@ export default defineConfig({
 			description: 'Battle Analysis and Raid Assessment System',
 			favicon: '/favicon.svg',
 			customCss: ['./src/styles/custom.css'],
+			// Override ThemeProvider to default to dark mode
+			components: {
+				ThemeProvider: './src/components/ThemeProvider.astro',
+			},
 			social: [
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/baras-app/baras' },
 			],
