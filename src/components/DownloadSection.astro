@@ -1,0 +1,211 @@
+---
+// DownloadSection.astro - Platform downloads with GitHub Releases API
+---
+
+<section class="download-section" id="download-section">
+  <p class="download-version">Loading version...</p>
+
+  <div class="download-buttons">
+    <a class="download-btn download-btn-windows" href="#" data-platform="windows">
+      <span class="download-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M3 5.5L10.5 4.4V11.5H3V5.5ZM3 18.5V12.5H10.5V19.6L3 18.5ZM11.5 4.2L21 3V11.5H11.5V4.2ZM11.5 12.5H21V21L11.5 19.8V12.5Z"/>
+        </svg>
+      </span>
+      <span class="download-label">Windows</span>
+      <span class="download-file">.exe installer</span>
+    </a>
+    <a class="download-btn download-btn-macos" href="#" data-platform="macos">
+      <span class="download-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
+        </svg>
+      </span>
+      <span class="download-label">macOS</span>
+      <span class="download-file">.dmg</span>
+    </a>
+    <a class="download-btn download-btn-linux" href="#" data-platform="linux">
+      <span class="download-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12.504 2C10.417 2 9.153 3.96 9.04 6.395c-.088 1.903.166 4.088-.563 5.784-.377.878-1.043 1.59-1.575 2.394-.532.804-.942 1.792-.535 2.77.17.411.525.736.901.992.375.257.783.456 1.156.68.372.225.725.487.908.862.203.419.135.91.135 1.355 0 .45-.042.933.193 1.325.235.392.723.571 1.242.571.52 0 1.06-.166 1.565-.166.506 0 .993.166 1.514.166.52 0 1.008-.18 1.243-.571.235-.392.193-.875.193-1.325 0-.445-.068-.936.135-1.355.183-.375.536-.637.908-.862.373-.224.781-.423 1.157-.68.375-.256.73-.58.9-.991.407-.978-.003-1.966-.535-2.77-.532-.804-1.198-1.516-1.575-2.394-.729-1.696-.475-3.88-.563-5.784C14.847 3.96 13.583 2 11.496 2h1.008zM12 4c.736 0 1.27.61 1.346 1.564.076.954.023 2.09.143 3.18.12 1.09.401 2.185.93 3.174h-4.838c.529-.989.81-2.085.93-3.175.12-1.09.067-2.225.143-3.18C10.73 4.61 11.264 4 12 4z"/>
+        </svg>
+      </span>
+      <span class="download-label">Linux</span>
+      <span class="download-file">.AppImage</span>
+    </a>
+  </div>
+
+  <p class="download-alt">
+    <a href="https://github.com/baras-app/baras/releases/latest">View all downloads on GitHub</a>
+  </p>
+</section>
+
+<script>
+const API_URL = 'https://api.github.com/repos/baras-app/baras/releases/latest';
+const FALLBACK_URL = 'https://github.com/baras-app/baras/releases/latest';
+
+// Platform detection
+function detectPlatform() {
+  const ua = navigator.userAgent;
+  if (/Windows/i.test(ua)) return 'windows';
+  if (/Macintosh|MacIntel|MacPPC|Mac68K/i.test(ua)) return 'macos';
+  if (/Linux/i.test(ua) && !/Android/i.test(ua)) return 'linux';
+  return 'windows'; // Default fallback
+}
+
+// Asset name patterns from GitHub Releases
+function findAsset(assets, platform) {
+  const patterns = {
+    windows: /_x64-setup\.exe$/,
+    macos: /_aarch64\.dmg$/,  // Apple Silicon primary
+    linux: /_amd64\.AppImage$/
+  };
+  return assets.find(a => patterns[platform]?.test(a.name));
+}
+
+async function loadReleases() {
+  try {
+    const response = await fetch(API_URL);
+    if (!response.ok) throw new Error('API request failed');
+
+    const release = await response.json();
+    const version = release.tag_name; // e.g., "v2026.1.1901"
+
+    // Update version display
+    const versionEl = document.querySelector('.download-version');
+    if (versionEl) {
+      versionEl.textContent = `Latest: ${version}`;
+    }
+
+    // Update download buttons
+    const buttons = document.querySelectorAll('.download-btn');
+    buttons.forEach(btn => {
+      const platform = btn.dataset.platform;
+      const asset = findAsset(release.assets, platform);
+      if (asset) {
+        btn.href = asset.browser_download_url;
+      } else {
+        btn.href = FALLBACK_URL;
+      }
+    });
+
+    // Highlight detected platform
+    const detected = detectPlatform();
+    document.querySelector(`[data-platform="${detected}"]`)?.classList.add('download-btn-primary');
+
+  } catch (error) {
+    console.warn('Failed to fetch releases:', error);
+    // Fallback: link all buttons to releases page
+    const versionEl = document.querySelector('.download-version');
+    if (versionEl) {
+      versionEl.textContent = 'Latest version';
+    }
+    document.querySelectorAll('.download-btn').forEach(btn => {
+      btn.href = FALLBACK_URL;
+    });
+    // Still highlight detected platform
+    const detected = detectPlatform();
+    document.querySelector(`[data-platform="${detected}"]`)?.classList.add('download-btn-primary');
+  }
+}
+
+document.addEventListener('DOMContentLoaded', loadReleases);
+</script>
+
+<style>
+  .download-section {
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  .download-version {
+    font-size: 0.9rem;
+    color: var(--sl-color-gray-3);
+    margin-bottom: 1.5rem;
+  }
+
+  .download-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .download-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.25rem 2rem;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.5rem;
+    background: var(--sl-color-gray-6);
+    color: var(--sl-color-white);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    min-width: 140px;
+  }
+
+  .download-btn:hover {
+    border-color: var(--sl-color-accent);
+    background: var(--sl-color-gray-5);
+    transform: translateY(-2px);
+  }
+
+  .download-btn-primary {
+    border-color: var(--sl-color-accent);
+    background: var(--sl-color-accent-low);
+  }
+
+  .download-btn-primary:hover {
+    background: var(--sl-color-accent-low);
+    border-color: var(--sl-color-accent-high);
+  }
+
+  .download-icon {
+    margin-bottom: 0.5rem;
+    color: var(--sl-color-accent);
+  }
+
+  .download-btn-primary .download-icon {
+    color: var(--sl-color-accent-high);
+  }
+
+  .download-label {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  .download-file {
+    font-size: 0.8rem;
+    color: var(--sl-color-gray-3);
+    margin-top: 0.25rem;
+  }
+
+  .download-alt {
+    font-size: 0.85rem;
+    color: var(--sl-color-gray-3);
+  }
+
+  .download-alt a {
+    color: var(--sl-color-accent);
+    text-decoration: none;
+  }
+
+  .download-alt a:hover {
+    text-decoration: underline;
+  }
+
+  /* Responsive: stack on mobile */
+  @media (max-width: 600px) {
+    .download-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .download-btn {
+      width: 100%;
+      max-width: 280px;
+    }
+  }
+</style>
