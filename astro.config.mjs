@@ -9,7 +9,7 @@ export default defineConfig({
     starlight({
       title: "BARAS",
       description: "Battle Analysis and Raid Assessment System",
-      favicon: "/favicon.svg",
+      favicon: "/favicon.ico",
       customCss: ["./src/styles/custom.css"],
       // Dark mode only - no theme toggle
       components: {
