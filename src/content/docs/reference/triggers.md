@@ -1,12 +1,24 @@
 ---
-title: Triggers
+title: Triggers & Filters
 ---
 
 ## Triggers
 
 Triggers are conditions that cause timers, phases, or counters to activate. They are the core building blocks of encounter definitions.
 
----
+:::note
+All ability and effect fields can be
+
+- log_id
+- Ability/Effect Name (exact log match)
+
+All source/target fields can be:
+
+- log_id
+- Name
+- Entity Roster name
+
+:::
 
 ### Combat State
 
@@ -96,23 +108,28 @@ Triggers are conditions that cause timers, phases, or counters to activate. They
 | ------- | -------------------------------------------- | ------------ |
 | Any Of  | Fires if any sub-condition is met (OR logic) | `conditions` |
 
+:::note
+Triggers are evaluated per event and don't support AND logic. Use counters to implement
+advanced trigger conditionals.
+:::
+
 ---
 
-### Entity Filters
+## Entity Filters
 
 Many triggers accept `source` and `target` filters to narrow down which entities should match:
 
-| Filter                  | Description                                      |
-| ----------------------- | ------------------------------------------------ |
-| Any                     | Matches any entity (default)                     |
-| Local Player            | Matches only the local player                    |
-| Other Players           | Matches other players (not local)                |
-| Any Player              | Matches any player                               |
-| Any Companion           | Matches any companion                            |
-| Any Player or Companion | Matches any player or companion                  |
-| Any Except Local        | Matches any entity except the local player       |
-| Current Target          | Matches the local player's current target        |
-| Boss                    | Matches any boss entity                          |
-| Adds (Non-Boss)         | Matches non-boss NPCs (adds)                     |
-| Any NPC                 | Matches any NPC                                  |
-| Specific (ID or Name)   | Matches entities by ID or name from the roster   |
+| Filter                  | Description                                    |
+| ----------------------- | ---------------------------------------------- |
+| Any                     | Matches any entity (default)                   |
+| Local Player            | Matches only the local player                  |
+| Other Players           | Matches other players (not local)              |
+| Any Player              | Matches any player                             |
+| Any Companion           | Matches any companion                          |
+| Any Player or Companion | Matches any player or companion                |
+| Any Except Local        | Matches any entity except the local player     |
+| Current Target          | Matches the local player's current target      |
+| Boss                    | Matches any boss entity                        |
+| Adds (Non-Boss)         | Matches non-boss NPCs (adds)                   |
+| Any NPC                 | Matches any NPC                                |
+| Specific (ID or Name)   | Matches entities by ID or name from the roster |
