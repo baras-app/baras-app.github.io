@@ -45,6 +45,7 @@ export default defineConfig({
           label: "Reference",
           items: [
             { label: "Encounter Builder", slug: "reference/encounter-builder" },
+            { label: "Triggers", slug: "reference/triggers" },
             { label: "Encounter Timers", slug: "reference/encounter-timers" },
             { label: "Effects Tracker", slug: "reference/effects-tracker" },
           ],
