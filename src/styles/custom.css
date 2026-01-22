@@ -1,3 +1,18 @@
+/* StarJedi font for BARAS branding */
+@font-face {
+  font-family: 'StarJedi';
+  src: url('/fonts/StarJedi.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Apply StarJedi to site title */
+a.site-title {
+  font-family: 'StarJedi', sans-serif !important;
+  letter-spacing: 0.05em;
+}
+
 /* BARAS brand colors */
 :root {
   /* Teal/cyan accent */
