@@ -20,6 +20,8 @@ These settings apply to all overlays and can be accessed from the Overlays tab.
 | Lock State | When locked, overlays cannot be moved or resized. Toggle to Move Mode to reposition.                         |
 | Profiles   | Save and load overlay configurations. Useful for different setups (e.g., tanking vs DPS layouts).            |
 
+![Overlays tab](/screenshots/overlays-tab.png)
+
 ### Positioning & Sizing
 
 Enter **Move Mode** from the Overlays tab to adjust overlay positions and sizes. In Move Mode:
@@ -28,6 +30,8 @@ Enter **Move Mode** from the Overlays tab to adjust overlay positions and sizes.
 - **Drag** the overlay to reposition it on screen
 - **Resize** using the handle in the bottom-right corner
 - Positions are automatically saved when exiting Move Mode
+
+![Overlays in move mode](/screenshots/overlays-move-mode.png)
 
 ---
 

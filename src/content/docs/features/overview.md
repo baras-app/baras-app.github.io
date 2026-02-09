@@ -11,6 +11,8 @@ BARAS (Battle Analysis and Raid Assessment System) is a modern combat log parser
 
 ## Real-Time Overlays
 
+![BARAS overlays in action](/screenshots/baras-overlays.png)
+
 BARAS provides [18 customizable overlays](/features/overlays) for monitoring combat performance in real-time:
 
 - **Metrics** - DPS, healing, damage taken, threat meters for your group
@@ -27,6 +29,8 @@ All overlays can be independently positioned, resized, and configured.
 
 ## Data Explorer
 
+![Data Explorer interface](/screenshots/data-explorer-overview.png)
+
 The [Data Explorer](/features/data-explorer) provides detailed post-combat analysis:
 
 - **Performance Charts** - DPS, HPS, and DTPS graphs over time
@@ -38,6 +42,8 @@ The [Data Explorer](/features/data-explorer) provides detailed post-combat analy
 ---
 
 ## Encounter Builder
+
+![Encounter Builder interface](/screenshots/encounter-builder-main.png)
 
 The [Encounter Builder](/features/encounter-builder) lets you customize how encounters are tracked:
 
@@ -52,6 +58,8 @@ All encounter definitions are configuration-driven and shareable.
 ---
 
 ## Effects Tracker
+
+![Effects Tracker interface](/screenshots/effects-tracker-main.png)
 
 The [Effects Tracker](/features/effects-tracker) monitors buffs, debuffs, and cooldowns:
 

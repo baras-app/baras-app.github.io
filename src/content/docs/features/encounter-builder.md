@@ -9,6 +9,8 @@ The Encounter Builder is BARAS's configuration system for boss encounters. It al
 
 Access the Encounter Builder from the **Encounter Builder** tab in the main application.
 
+![Encounter Builder main interface](/screenshots/encounter-builder-main.png)
+
 ---
 
 ## Key Concepts
@@ -40,6 +42,8 @@ Each encounter definition consists of several interconnected components:
 
 The entity roster defines which NPCs belong to an encounter and how they should be tracked.
 
+![Entity Roster configuration](/screenshots/encounter-builder-entity-roster.png)
+
 Key settings for each entity:
 
 - **Triggers Encounter** - Starts the encounter when this entity appears
@@ -55,6 +59,8 @@ Entities can be referenced by name in triggers throughout the encounter definiti
 
 Phases divide an encounter into distinct segments for analysis and timer control.
 
+![Phases editor](/screenshots/encounter-builder-phases.png)
+
 Use phases to:
 
 - Track DPS during specific burn windows
@@ -66,6 +72,8 @@ Use phases to:
 ## Timers
 
 Timers track boss abilities and mechanics with countdown displays and alerts.
+
+![Timers list](/screenshots/encounter-builder-timers.png)
 
 See [Encounter Timers Reference](/reference/encounter-timers) for detailed configuration options.
 
@@ -86,6 +94,8 @@ Use counters to:
 ## Challenges
 
 Challenges track specific performance metrics during an encounter.
+
+![Challenges configuration](/screenshots/encounter-builder-challenges.png)
 
 Available metrics include damage, healing, ability counts, and more. Challenges can be scoped to specific phases, targets, or conditions.
 

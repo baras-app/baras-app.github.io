@@ -11,6 +11,8 @@ Access the Effects Tracker from the **Effects** tab in the main application.
 
 ---
 
+![Effect configuration form](/screenshots/effects-tracker-main.png)
+
 ## Effect Fields
 
 ### Identity
@@ -76,6 +78,8 @@ Common filters:
 ---
 
 ## Display Options
+
+![Effect display options](/screenshots/effects-tracker-display-options.png)
 
 | Option                       | Description                                                              |
 | ---------------------------- | ------------------------------------------------------------------------ |
@@ -184,6 +188,8 @@ Track a proc and alert when it's available:
 ---
 
 ## Effect List
+
+![Effect list](/screenshots/effects-tracker-main.png)
 
 The effect list shows all defined effects. Each row displays:
 

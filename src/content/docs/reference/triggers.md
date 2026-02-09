@@ -20,6 +20,8 @@ All source/target fields can be:
 
 :::
 
+![Trigger type dropdown](/screenshots/ref-trigger-dropdown.png)
+
 ### Combat State
 
 | Trigger      | Description                                                                                                                        |
@@ -116,6 +118,8 @@ advanced trigger conditionals.
 ---
 
 ## Entity Filters
+
+![Entity filter dropdown](/screenshots/ref-entity-filters.png)
 
 Many triggers accept `source` and `target` filters to narrow down which entities should match:
 

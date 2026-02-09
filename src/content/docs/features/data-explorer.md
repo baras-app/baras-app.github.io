@@ -9,6 +9,8 @@ The Data Explorer is BARAS's post-combat analysis tool. Review past encounters w
 
 Access the Data Explorer from the **Data Explorer** tab in the main application.
 
+![Data Explorer main view](/screenshots/data-explorer-overview.png)
+
 ---
 
 ## Encounter List
@@ -22,6 +24,8 @@ The left sidebar displays all parsed encounters from your combat logs.
 
 Click an encounter to load its data in the main panel.
 
+![Encounter list sidebar](/screenshots/data-explorer-encounter-list.png)
+
 ---
 
 ## Phase Timeline
@@ -32,6 +36,8 @@ The horizontal timeline at the top shows encounter phases. Click a phase to filt
 - Shows phase duration and transitions
 - Filter analysis to specific phases or the entire fight
 
+![Phase timeline bar](/screenshots/data-explorer-phase-timeline.png)
+
 ---
 
 ## Analysis Tabs
@@ -40,15 +46,17 @@ The horizontal timeline at the top shows encounter phases. Click a phase to filt
 
 Summary table showing all players with key metrics:
 
-| Column        | Description                    |
-| ------------- | ------------------------------ |
-| Damage Dealt  | Total damage and DPS           |
-| Threat        | Total threat and TPS           |
-| Damage Taken  | Total damage taken and DTPS    |
-| Healing       | Total healing, HPS, and effective healing % |
-| Shielding     | Total shielding and SPS        |
+| Column       | Description                                 |
+| ------------ | ------------------------------------------- |
+| Damage Dealt | Total damage and DPS                        |
+| Threat       | Total threat and TPS                        |
+| Damage Taken | Total damage taken and DTPS                 |
+| Healing      | Total healing, HPS, and effective healing % |
+| Shielding    | Total shielding and SPS                     |
 
 Includes group totals and per-player breakdown charts.
+
+![Overview tab](/screenshots/data-explorer-overview.png)
 
 ### Charts
 
@@ -60,11 +68,16 @@ Visual performance graphs over the encounter duration:
 
 Select players to compare and toggle chart types.
 
+![Charts tab](/screenshots/data-explorer-charts.png)
+
 Also shows:
+
 - **Abilities** - Cast counts and uptime for each ability
 - **Passive Effects** - Proc counts and uptime for buffs/effects
 
 ### Damage
+
+![Damage breakdown tab](/screenshots/data-explorer-damage.png)
 
 Detailed damage breakdown by player, showing:
 
@@ -99,6 +112,8 @@ Breakdown of healing received by each player:
 
 ### Combat Log
 
+![Combat log viewer](/screenshots/data-explorer-combat-log.png)
+
 Raw combat log viewer with filtering options. Search and filter events by:
 
 - Event type
@@ -117,13 +132,3 @@ Player entries show:
 - Class icon
 - Character name
 - Role indicator
-
----
-
-## Tips
-
-- Use **Bosses Only** to filter out trash fights when reviewing raid nights
-- Compare attempts by clicking different encounters in the sidebar
-- Use phase filtering to analyze specific burn windows or mechanics
-- Check the Charts tab to identify performance drops during specific mechanics
-- Review Damage Taken to identify players taking avoidable damage

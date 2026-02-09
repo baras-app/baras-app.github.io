@@ -11,6 +11,8 @@ Timers are configured in the [Encounter Builder](/reference/encounter-builder) u
 
 ---
 
+![Timer configuration form](/screenshots/encounter-builder-timers.png)
+
 ## Timer Fields
 
 ### Identity
@@ -61,6 +63,8 @@ Common timer triggers include:
 
 ## Display Options
 
+![Timer display options](/screenshots/encounter-builder-timers.png)
+
 | Option         | Description                                                                                     |
 | -------------- | ----------------------------------------------------------------------------------------------- |
 | Color          | Bar color for this timer (click to open color picker)                                          |
@@ -83,6 +87,8 @@ Conditions restrict when a timer can activate.
 ---
 
 ## Audio
+
+![Timer audio settings](/screenshots/encounter-builder-timers.png)
 
 Audio settings control sounds and voice alerts for the timer.
 
@@ -159,6 +165,8 @@ For mechanics that repeat in sequence (A happens, then B 10s later, then C 15s a
 ---
 
 ## Timer List
+
+![Timer list](/screenshots/encounter-builder-timers.png)
 
 The timer list shows all timers for the current encounter. Each row displays:
 

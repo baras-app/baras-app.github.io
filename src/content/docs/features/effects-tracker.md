@@ -7,6 +7,8 @@ description: Track buffs, debuffs, cooldowns, and DOTs with customizable display
 
 The Effects Tracker allows you to define custom effect definitions that track abilities, buffs, debuffs, and cooldowns. Each effect can be displayed on one of four overlay targets.
 
+![Effects Tracker main interface](/screenshots/effects-tracker-main.png)
+
 ---
 
 ## Identity
@@ -31,6 +33,8 @@ The Effects Tracker allows you to define custom effect definitions that track ab
 
 ## Trigger
 
+![Effect trigger configuration](/screenshots/effects-tracker-main.png)
+
 | Field             | Description                                              |
 | ----------------- | -------------------------------------------------------- |
 | Trigger           | What starts tracking (Ability Cast, Effect Applied, etc) |
@@ -51,6 +55,8 @@ The Effects Tracker allows you to define custom effect definitions that track ab
 ---
 
 ## Display Options
+
+![Effect display options](/screenshots/effects-tracker-display-options.png)
 
 | Option                              | Description                                              |
 | ----------------------------------- | -------------------------------------------------------- |

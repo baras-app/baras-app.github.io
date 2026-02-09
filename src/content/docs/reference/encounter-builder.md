@@ -10,6 +10,8 @@ of an encounter.
 
 ### Entity Roster
 
+![Entity Roster configuration](/screenshots/encounter-builder-entity-roster.png)
+
 The entity roster is a powerful tool that allows the configuration of encounters.
 
 Entities added to the encounter builder can be referenced by their given name (i.e. Draxus will resolve to the associated ids)
@@ -27,6 +29,8 @@ in triggers that reference specific entities.
   death of all active kill targets will end the encounter.
 
 ### Phases
+
+![Phases editor](/screenshots/encounter-builder-phases.png)
 
 In this section you can create new phases and edit existing phases.
 
@@ -53,6 +57,8 @@ it's trigger value to `never`
 
 ### Counters
 
+![Counters configuration](/screenshots/encounter-builder-main.png)
+
 Counters are used to track the encounter state over time. This helps separate state logic from the timer defintion. They can be used to trigger timers and phases.
 
 #### Options
@@ -63,6 +69,8 @@ Counters are used to track the encounter state over time. This helps separate st
 - **Initial Value** - the initial value of the counter
 
 ### Challenges
+
+![Challenges configuration](/screenshots/encounter-builder-challenges.png)
 
 Challenges allow you to track performance metrics during an encounter. They can be scoped to specific phases or the entire fight.
 

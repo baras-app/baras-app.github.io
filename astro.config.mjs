@@ -36,9 +36,12 @@ export default defineConfig({
           items: [
             { label: "Overview", slug: "features/overview" },
             { label: "Data Explorer", slug: "features/data-explorer" },
+            { label: "Rotation Analyzer", slug: "features/rotation-analyzer" },
             { label: "Overlays", slug: "features/overlays" },
+            { label: "Overlay Profiles", slug: "features/overlay-profiles" },
             { label: "Encounter Builder", slug: "features/encounter-builder" },
             { label: "Effects Tracker", slug: "features/effects-tracker" },
+            { label: "Parsely Upload", slug: "features/parsely-upload" },
           ],
         },
         {
@@ -52,7 +55,12 @@ export default defineConfig({
         },
         {
           label: "Configuration",
-          items: [{ label: "Overview", slug: "configuration/overview" }],
+          items: [
+            { label: "Overview", slug: "configuration/overview" },
+            { label: "Hotkeys", slug: "configuration/hotkeys" },
+            { label: "Log Management", slug: "configuration/log-management" },
+            { label: "Import & Export", slug: "configuration/import-export" },
+          ],
         },
         {
           label: "Troubleshooting",
