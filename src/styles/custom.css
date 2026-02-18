@@ -39,10 +39,57 @@ a.site-title {
   padding-bottom: 1rem;
 }
 
+/* Hero brand name in accent color + StarJedi font */
+.hero h1 .hero-brand {
+  color: var(--sl-color-accent-high);
+  font-family: 'StarJedi', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.hero h1 .hero-subtitle {
+  font-size: 0.6em;
+  font-weight: 400;
+  opacity: 0.75;
+  display: block;
+  color: var(--sl-color-gray-2);
+}
+
+/* Tagline keyword highlights */
+[data-page-title] ~ .tagline strong,
+.hero .tagline strong {
+  color: var(--sl-color-accent-high);
+  font-weight: 600;
+}
+
+/* Card title accent color */
+.card .title {
+  color: var(--sl-color-accent-high);
+}
+
+/* Section headers with accent underline */
+.sl-markdown-content h2 {
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--sl-color-accent);
+  display: inline-block;
+}
+
 /* Screenshot carousel section styling */
 .sl-markdown-content h2:has(+ .carousel-container),
 .sl-markdown-content h2 + .carousel-container {
   margin-top: 0;
+}
+
+
+
+/* Download primary button glow */
+.download-btn-primary {
+  box-shadow: 0 0 15px rgba(8, 145, 178, 0.3), 0 0 40px rgba(8, 145, 178, 0.1);
+}
+
+/* Hero action buttons — light grey borders */
+.hero .sl-link-button.primary,
+.hero .sl-link-button.secondary {
+  border: 2px solid var(--sl-color-gray-3);
 }
 
 /* Downloads section anchor styling */

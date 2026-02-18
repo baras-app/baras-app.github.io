@@ -3,8 +3,8 @@ title: Welcome to BARAS
 description: Battle Analysis and Raid Assessment System - A combat log parser for SWTOR.
 template: splash
 hero:
-  title: BARAS - The Battle Analysis and Raid Assessment System
-  tagline: "Modern. Fast. Customizable. Cross-Platform Parser for Star Wars: The Old Republic"
+  title: '<span class="hero-brand">BARAS</span> <span class="hero-subtitle">The Battle Analysis and Raid Assessment System</span>'
+  tagline: "<strong>18 overlays.</strong> Polished UI. Complete timer system. Effects tracking. Ultra performant. <strong>The endgame of SWTOR parsers.</strong>"
   image:
     file: ../../assets/images/app-icon.png
     alt: BARAS overlay showing DPS meters during raid combat
@@ -28,29 +28,23 @@ import { Card, CardGrid } from "@astrojs/starlight/components";
 import ScreenshotCarousel from "../../components/ScreenshotCarousel.astro";
 import DownloadSection from "../../components/DownloadSection.astro";
 
-## See BARAS in Action
-
-<ScreenshotCarousel />
-
-## Features
-
-<CardGrid stagger>
-  <Card title="Fast and Performant" icon="laptop">
-    Parse and entire raid night's log files at sub-second speeds. Run the app as
-    long as you want without worrying about memory.
+<CardGrid>
+  <Card title="18 Overlays and Counting" icon="laptop">
+    DPS meters, boss health, encounter timers, effects tracking, raid frames,
+    DoT trackers, alerts, and more. Every overlay can be independently
+    positioned, resized, and styled. Fine-tune a perfect setup or go minimalist
+    — it's up to you.
   </Card>
-  <Card title="Fully customizable overlays" icon="rocket">
-    18 Overlays with more on the way! Each with a full set of customization
-    options.
-  </Card>
-  <Card title="Configuration Driven" icon="document">
-    Customize fight phases, timers, effects and more. Take full control and
-    personalize your experience.
-  </Card>
-  <Card title="Cross-platform" icon="setting">
-    Works on Windows, macOS, and Linux. Native. No Wine. No hacks.
+  <Card title="Quality of Life, Everywhere" icon="star">
+    No more digging through `combat_2026-xx-xx.txt` files in Windows Explorer.
+    BARAS indexes your logs automatically — browse sessions by date, character,
+    and operation. Swap overlay profiles in a click. Automatic pull-count
+    tracking. One-click upload to Parsely. Every rough edge has been sanded
+    down.
   </Card>
 </CardGrid>
+
+<ScreenshotCarousel />
 
 <div id="downloads">
 
@@ -59,3 +53,30 @@ import DownloadSection from "../../components/DownloadSection.astro";
 <DownloadSection />
 
 </div>
+
+## Features
+
+<CardGrid stagger>
+  <Card title="Sub-Second Parsing" icon="rocket">
+    A full raid night parses in the time it takes you to blink. Memory-stable
+    over long sessions — likely using less RAM than a single Chrome tab.
+  </Card>
+  <Card title="Build Your Own Encounters" icon="puzzle">
+    Broadsword added a new boss? Configure it yourself in the encounter editor.
+    Define phases, timers, challenges, and entity rosters for any fight — past,
+    present, or future. No app update needed.
+  </Card>
+  <Card title="Deep Effects Tracking" icon="seti:todo">
+    Track buffs, debuffs, procs, cooldowns, and DoTs across multiple targets.
+    Configure exactly what you want to see and how you want to see it. Supports
+    audio and text alerts for when effects apply or expire.
+  </Card>
+  <Card title="Cross-Platform" icon="setting">
+    Native overlays on Windows, Linux (Wayland and X11), and macOS. No Java, no
+    Wine, no workarounds. All features work identically on every platform.
+  </Card>
+  <Card title="Open Source, Active Development" icon="github">
+    View the codebase on GitHub or contribute yourself. BARAS is actively
+    developed — if you have a feature you really want, don't be afraid to ask.
+  </Card>
+</CardGrid>

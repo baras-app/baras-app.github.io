@@ -1,36 +1,55 @@
 ---
 // ScreenshotCarousel.astro - Pure CSS scroll-snap carousel for showcasing BARAS screenshots
-import barasInAction from '../assets/screenshots/baras-in-action.png';
-import barasOverlays from '../assets/screenshots/baras-overlays.png';
-import barasTimerCustomization from '../assets/screenshots/baras-timer-customization.png';
-import barasEffects from '../assets/screenshots/baras-effects.png';
-import barasDataExplorer from '../assets/screenshots/baras-data-explorer.png';
-
 const screenshots = [
   {
-    src: barasInAction.src,
-    alt: 'BARAS in action during raid combat',
-    caption: 'BARAS In Action',
+    src: '/screenshots/incombat-healer.png',
+    alt: 'In-combat healer overlay during raid',
+    caption: 'In-Combat Healer Overlay',
   },
   {
-    src: barasOverlays.src,
-    alt: 'DPS overlay showing real-time damage meters',
-    caption: 'Real-time DPS Overlays',
+    src: '/screenshots/in-combat-timers.png',
+    alt: 'In-combat boss timers overlay',
+    caption: 'In-Combat Timers',
   },
   {
-    src: barasTimerCustomization.src,
-    alt: 'Timer customization settings',
-    caption: 'Custom Boss Timers',
+    src: '/screenshots/overlays-closeup.png',
+    alt: 'Close-up view of BARAS overlays',
+    caption: 'Overlays Close-Up',
   },
   {
-    src: barasEffects.src,
-    alt: 'Effects tracking display',
-    caption: 'Effects Tracking',
+    src: '/screenshots/data-charts.png',
+    alt: 'Data charts showing combat analysis',
+    caption: 'Data Charts',
   },
   {
-    src: barasDataExplorer.src,
-    alt: 'Data explorer showing combat analysis',
-    caption: 'Data Explorer',
+    src: '/screenshots/combat-log.png',
+    alt: 'Combat log viewer',
+    caption: 'Combat Log',
+  },
+  {
+    src: '/screenshots/rotation-viewer.png',
+    alt: 'Ability rotation viewer',
+    caption: 'Rotation Viewer',
+  },
+  {
+    src: '/screenshots/dot-tracker.png',
+    alt: 'DoT tracker overlay',
+    caption: 'DoT Tracker',
+  },
+  {
+    src: '/screenshots/session-page.png',
+    alt: 'Session overview page',
+    caption: 'Session Page',
+  },
+  {
+    src: '/screenshots/timer-editor.png',
+    alt: 'Timer editor for custom boss timers',
+    caption: 'Timer Editor',
+  },
+  {
+    src: '/screenshots/effect-editor.png',
+    alt: 'Effect editor for tracking buffs and debuffs',
+    caption: 'Effect Editor',
   },
 ];
 ---
