@@ -9,18 +9,21 @@ The Data Explorer is BARAS's post-combat analysis tool. Review past encounters w
 
 Access the Data Explorer from the **Data Explorer** tab in the main application.
 
+### Controls
+
+The data explorer can be expanded to the full window by pressing the icon on the top-right of the tab selector.
+
 ![Data Explorer main view](/screenshots/data-explorer-overview.png)
 
 ---
 
 ## Encounter List
 
-The left sidebar displays all parsed encounters from your combat logs.
+The left sidebar displays all parsed encounters from your combat log. Encounter will appear here
+after combat ends.
 
 - **Bosses Only** - Filter to show only boss encounters
-- Encounters show boss name, attempt number, timestamp, and duration
-- **Checkmark** indicates a successful kill
-- **Red X** indicates a wipe
+- Click the arrow buttons in the to-left corner to hide the encounters sidebar
 
 Click an encounter to load its data in the main panel.
 
@@ -32,11 +35,15 @@ Click an encounter to load its data in the main panel.
 
 The horizontal timeline at the top shows encounter phases. Click a phase to filter the data to that time window.
 
-- Each phase is color-coded and labeled
-- Shows phase duration and transitions
-- Filter analysis to specific phases or the entire fight
-
 ![Phase timeline bar](/screenshots/data-explorer-phase-timeline.png)
+
+Use can filter the timeline by:
+
+- Clicking and dragging the mouse over a segment
+- Clicking on a phase badge
+- Clicking on a phase in the timeline
+- Entering start/end times in the selection box below the timeline
+- Right clicking on a specific line in the combat log and setting it as the start/end time
 
 ---
 
@@ -44,29 +51,23 @@ The horizontal timeline at the top shows encounter phases. Click a phase to filt
 
 ### Overview
 
-Summary table showing all players with key metrics:
+The overview tab serves as a landing page the lets you view raid-wide statistics at a glance.
 
-| Column       | Description                                 |
-| ------------ | ------------------------------------------- |
-| Damage Dealt | Total damage and DPS                        |
-| Threat       | Total threat and TPS                        |
-| Damage Taken | Total damage taken and DTPS                 |
-| Healing      | Total healing, HPS, and effective healing % |
-| Shielding    | Total shielding and SPS                     |
-
-Includes group totals and per-player breakdown charts.
+- A detailed table of common metrics
+- Doughnut charts showing the proportion of Damage/Threat/Healing/Damage Taken each player contributed to the group total
+- A table showing the last logged health value of every NPC that participated in the encounter
 
 ![Overview tab](/screenshots/data-explorer-overview.png)
 
 ### Charts
 
-Visual performance graphs over the encounter duration:
+This page time series charts displaying per-player metrics over the course of the fight. The x-axis
+represents 1-second time intervals. Both burst and per second averages are displayed where applicable.
 
 - **DPS** - Damage per second over time
-- **HPS** - Healing per second over time
+- **HPS** - Healing per second over time. The green line represents raw HPS. The blue line represent EHPS.
 - **DTPS** - Damage taken per second over time
-
-Select players to compare and toggle chart types.
+- **HP%** - the player's health balance over the fight.
 
 ![Charts tab](/screenshots/data-explorer-charts.png)
 
@@ -75,16 +76,14 @@ Also shows:
 - **Abilities** - Cast counts and uptime for each ability
 - **Passive Effects** - Proc counts and uptime for buffs/effects
 
-### Damage
+### Metric Breakdown Tabs
+
+The **Damage**, **Healing**, **Damage Taken**, and **Healing Taken** tabs show
+player/NPC level breakdowns.
 
 ![Damage breakdown tab](/screenshots/data-explorer-damage.png)
 
 Detailed damage breakdown by player, showing:
-
-- Damage by ability
-- Damage by target
-- Critical hit rates
-- Damage types
 
 ### Healing
 
@@ -120,15 +119,3 @@ Raw combat log viewer with filtering options. Search and filter events by:
 - Source/target
 - Ability name
 - Time range
-
----
-
-## Player Selection
-
-Click a player in the sidebar to focus on their individual performance. The analysis tabs will show detailed breakdowns for that player.
-
-Player entries show:
-
-- Class icon
-- Character name
-- Role indicator
