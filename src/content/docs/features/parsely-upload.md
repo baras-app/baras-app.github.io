@@ -3,8 +3,6 @@ title: Parsely Upload
 description: Upload combat logs and individual encounters to Parsely.io for sharing and comparison.
 ---
 
-## Parsely Upload
-
 BARAS integrates with [Parsely.io](https://parsely.io), a community tool for sharing and comparing SWTOR combat logs. You can upload entire log files or individual encounters directly from BARAS.
 
 ---

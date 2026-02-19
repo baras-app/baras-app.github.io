@@ -29,6 +29,15 @@ export default defineConfig({
           items: [
             { label: "Installation", slug: "getting-started/installation" },
             { label: "Quick Start", slug: "getting-started/quick-start" },
+            {
+              label: "Tutorials",
+              items: [
+                { label: "Creating a Profile", slug: "getting-started/tutorials/creating-a-profile" },
+                { label: "Setting up Raid HOTs", slug: "getting-started/tutorials/setting-up-raid-hots" },
+                { label: "Tracking Effects", slug: "getting-started/tutorials/tracking-effects" },
+                { label: "Creating Custom Timers", slug: "getting-started/tutorials/creating-custom-timers" },
+              ],
+            },
           ],
         },
         {
