@@ -9,16 +9,16 @@ BARAS provides 18 customizable overlays organized into three categories. Each ov
 
 ---
 
-## Global Configuration
+## Global Controls
 
 These settings apply to all overlays and can be accessed from the Overlays tab.
 
-| Setting    | Description                                                                                                   |
-| ---------- | ------------------------------------------------------------------------------------------------------------- |
-| Enabled    | Toggle whether the overlay is active. Click the overlay button in the Overlays tab to enable/disable.        |
-| Visibility | Toggle between visible and hidden states. Hidden overlays remain configured but aren't displayed.            |
-| Lock State | When locked, overlays cannot be moved or resized. Toggle to Move Mode to reposition.                         |
-| Profiles   | Save and load overlay configurations. Useful for different setups (e.g., tanking vs DPS layouts).            |
+| Setting    | Description                                                                                           |
+| ---------- | ----------------------------------------------------------------------------------------------------- |
+| Enabled    | Toggle whether the overlay is active. Click the overlay button in the Overlays tab to enable/disable. |
+| Visibility | Toggle between visible and hidden states. Hidden overlays remain configured but aren't displayed.     |
+| Lock State | When locked, overlays cannot be moved or resized. Toggle to Move Mode to reposition.                  |
+| Profiles   | Save and load overlay configurations. Useful for different setups (e.g., tanking vs DPS layouts).     |
 
 ![Overlays tab](/screenshots/overlays-tab.png)
 
@@ -35,23 +35,46 @@ Enter **Move Mode** from the Overlays tab to adjust overlay positions and sizes.
 
 ---
 
-## General
+## General Overlays
 
 ### Personal Stats
 
 Displays your personal combat statistics in real-time, including DPS, HPS, threat, and other performance metrics. Useful for monitoring your own output during encounters.
 
+![Personal States](/screenshots/overlay-personal.png)
+
 **Customization Options:**
-- **Visible Stats** - Select which stats to display (Encounter Name, Difficulty, Duration, DPS, eDPS, Boss DPS, HPS, eHPS, DTPS, TPS, APM, Crit %, Phase, etc.)
-- **Font Color** - Color for stat values
-- **Label Color** - Color for stat labels
+
+You can pick and choose the elements to display on the personal overlay as well as the order in which they appear. Additionally, separator lines can be placed between elements.
+
+| Element        | Description                                            |
+| -------------- | ------------------------------------------------------ |
+| Encounter Name | The name of the encounter and the pull count.          |
+| Difficulty     | The area's difficulty                                  |
+| Duration       | The current duration of combat                         |
+| Phase          | The name of the current phase of a boss fight, if any. |
+| APM            | Your Actions Per Minute                                |
+| Damage         | DPS, Total Damage, Crit %                              |
+| Healing        | HPS, EHPS, Eff Heal %                                  |
+| Heal+          | Total Healing, Total Effective Healing, Heal Crit %    |
+| DTPS           | DTPS, Total Damage Taken                               |
+| Threat         | TPS, Total thread                                      |
+| Boss DMG       | Boss DPS, Total Boss Damage                            |
+| Defense        | Defense %, Shielding %                                 |
+
+- **Font Color** - Color for values, does not affect numeric values if Auto-color values is enabled
+- **Label Color** - General font color of label text
+- **Auto-color Values** - automatically assign canonical colors to metrics values (i.e. heals are green, DPS is red)
+- **Hide Empty Values** - Automatically hide entries if the value is 0/blank
 - **Opacity** - Background transparency
+- **Line Spacing** - controls white space between elements
 
 ### Raid Frames
 
 Shows health bars and status information for your group or raid members. Helps healers and tanks track party health at a glance.
 
 **Customization Options:**
+
 - **Grid Columns** - Number of columns in the grid layout
 - **Grid Rows** - Number of rows in the grid layout (total slots must be 4, 8, or 16)
 - **Max Effects Per Frame** - Maximum tracked effects shown per player
@@ -63,11 +86,26 @@ Shows health bars and status information for your group or raid members. Helps h
 - **Show Effect Icons** - Display icons for tracked effects
 - **Opacity** - Background transparency
 
+### Alerts
+
+Shows triggered alert notifications from effects and encounter timers. Alerts appear when configured conditions are met, such as an effect expiring or a timer reaching zero.
+
+**Customization Options:**
+
+- **Font Size** - Size of alert text
+- **Max Display** - Maximum alerts to show at once
+- **Default Duration** - Seconds to show each alert at full opacity
+- **Fade Duration** - Seconds for fade-out effect after duration expires
+- **Opacity** - Background transparency
+
+## Encounter Overlays
+
 ### Boss Health
 
 Displays HP bars for encounter entities. Only entities with **Show on HP Overlay** enabled in the [Encounter Builder](/reference/encounter-builder) will appear on this overlay.
 
 **Customization Options:**
+
 - **Bar Color** - Color of the health bars
 - **Font Color** - Color of the text
 - **Show Percent** - Display HP percentage
@@ -79,6 +117,7 @@ Displays HP bars for encounter entities. Only entities with **Show on HP Overlay
 Shows active timers and upcoming mechanics from the current encounter definition. Timers are configured in the [Encounter Builder](/reference/encounter-builder) and display countdowns for boss abilities and phase transitions.
 
 **Customization Options:**
+
 - **Default Bar Color** - Default color for timer bars (individual timers can override)
 - **Font Color** - Color for timer text
 - **Max Display** - Maximum number of timers to show
@@ -90,6 +129,7 @@ Shows active timers and upcoming mechanics from the current encounter definition
 Displays challenge metrics defined in the [Encounter Builder](/reference/encounter-builder). Challenges track specific performance goals during encounters, such as damage during a phase or ability usage counts.
 
 **Customization Options:**
+
 - **Font Color** - Color for challenge text
 - **Default Bar Color** - Default color for challenge bars (individual challenges can override)
 - **Show Footer** - Display footer with totals
@@ -99,33 +139,25 @@ Displays challenge metrics defined in the [Encounter Builder](/reference/encount
 - **Opacity** - Background transparency
 
 **Available Metrics:**
+
 - Damage, Healing, Effective Healing
 - Damage Taken, Healing Taken
 - Ability Count, Effect Count
 - Deaths, Threat
 
 **Conditions** (scope metrics to specific situations):
+
 - Target, Source, Ability, Effect filters
 - Phase restrictions
 - Counter conditions
 - Boss HP Range
-
-### Alerts
-
-Shows triggered alert notifications from effects and encounter timers. Alerts appear when configured conditions are met, such as an effect expiring or a timer reaching zero.
-
-**Customization Options:**
-- **Font Size** - Size of alert text
-- **Max Display** - Maximum alerts to show at once
-- **Default Duration** - Seconds to show each alert at full opacity
-- **Fade Duration** - Seconds for fade-out effect after duration expires
-- **Opacity** - Background transparency
 
 ### Notes
 
 Displays encounter-specific notes configured in the Encounter Builder. Useful for showing reminders or strategies during fights.
 
 **Customization Options:**
+
 - **Font Size** - Size of notes text
 - **Font Color** - Color of notes text
 - **Opacity** - Background transparency
@@ -138,9 +170,10 @@ Effects overlays display tracked abilities, buffs, debuffs, and cooldowns. Each 
 
 ### Effects A
 
-Primary effects overlay, typically used for tracking personal buffs and procs. Effects assigned to this target in the Effects Tracker will display here.
+Primary effects overlay, typically used for tracking personal buffs and procs.
 
 **Customization Options:**
+
 - **Icon Size** - Size of effect icons in pixels
 - **Max Display** - Maximum effects to show
 - **Layout Vertical** - Use vertical layout (true) or horizontal (false)
@@ -152,23 +185,14 @@ Primary effects overlay, typically used for tracking personal buffs and procs. E
 
 ### Effects B
 
-Secondary effects overlay, typically used for tracking debuffs or secondary buff categories. Allows separation of effect types for cleaner displays.
-
-**Customization Options:**
-- **Icon Size** - Size of effect icons in pixels
-- **Max Display** - Maximum effects to show
-- **Layout Vertical** - Use vertical layout (true) or horizontal (false)
-- **Show Effect Names** - Display effect names below/beside icons
-- **Show Countdown** - Display countdown text on icons
-- **Stack Priority** - When enabled, stacks are shown large and centered; timer is secondary
-- **Show Header** - Display header title above overlay
-- **Opacity** - Background transparency
+Functions exactly the same as Effects A. Allows separation of effect types for cleaner displays.
 
 ### Cooldowns
 
 Tracks ability cooldowns with visual timers. Assign abilities to this target in the Effects Tracker to monitor when key abilities become available.
 
 **Customization Options:**
+
 - **Icon Size** - Size of cooldown icons in pixels
 - **Max Display** - Maximum cooldowns to show
 - **Show Ability Names** - Display ability names
@@ -183,6 +207,7 @@ Tracks ability cooldowns with visual timers. Assign abilities to this target in 
 Multi-target DOT tracking overlay that shows effect timers per target. Displays the remaining duration of your damage-over-time effects on each affected enemy, helping maintain uptime across multiple targets.
 
 **Customization Options:**
+
 - **Max Targets** - Maximum targets to track simultaneously
 - **Icon Size** - Size of DOT icons in pixels
 - **Prune Delay** - Seconds to keep a target after last DOT expires
@@ -202,6 +227,7 @@ Metrics overlays display combat performance data for all players in your group. 
 All metrics overlays share the same customization options:
 
 **Common Customization Options:**
+
 - **Show Per-Second** - Display per-second rate (e.g., DPS, HPS)
 - **Show Total** - Display total values
 - **Show Header** - Display overlay header
@@ -215,21 +241,28 @@ All metrics overlays share the same customization options:
 - **Opacity** - Background transparency
 
 **Global Metrics Settings:**
+
 - **Show Empty Bars** - Display bars for players with zero values
 - **Stack from Bottom** - Grow bars from bottom instead of top
 - **Scaling Factor** - UI scale multiplier
 
 ### Damage
 
+![Damage Overlay ](/screenshots/overlay-dmg.png)
+
 Total damage dealt by each player. Includes all damage output regardless of whether it was absorbed or mitigated by the target.
 
 ### Effective Damage
 
-Damage that actually reduced target health. Excludes damage that was absorbed by shields or mitigated by other effects. Useful for evaluating true damage contribution.
+![Efective Damage](/screenshots/overlay-edps.png)
+
+Visually splits damage into damage done to bosses (darker shade) and total boss plus add damage (lighter shade). EDPS will also exclude damage that is greater than the NPC's remaining health pool when a killing blow is struck.
 
 ### Boss Damage
 
-Damage dealt specifically to entities marked as **Is Boss** in the [Encounter Builder](/reference/encounter-builder). Filters out add damage for cleaner boss DPS comparisons.
+![Boss Damage](/screenshots/overlay-bdps.png)
+
+Damage dealt specifically to entities marked as **Is Boss** in the [Encounter Builder](/reference/encounter-builder).
 
 ### Healing
 

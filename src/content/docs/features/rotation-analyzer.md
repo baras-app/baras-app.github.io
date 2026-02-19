@@ -15,34 +15,17 @@ Access it from the **Rotation** tab in the Data Explorer.
 
 ## How It Works
 
-The analyzer splits a player's ability usage into **cycles** based on an anchor ability you choose. The anchor is typically the signature or most frequently repeated ability in a rotation (e.g., a filler ability that marks the start of each rotation loop).
+The analyzer splits a player's ability usage into **cycles** based on an anchor ability you choose. The anchor ability
+is typically the starting ability of a DPS player's chosen rotation, but can be any ability on or off GCD.
 
 Each cycle shows:
 
-- **GCD abilities** — Main abilities used in the Global Cooldown timeline, displayed as icons in a horizontal row
-- **Off-GCD weaves** — Abilities used between GCDs, stacked above the GCD ability they were woven with
-
----
-
-## Creating a Rotation Visualization
-
-1. Select a **player** from the sidebar
-2. Choose an **anchor ability** from the dropdown (populated with all abilities used by that player)
-3. Click **Create**
-
-![Rotation controls](/screenshots/rotation-overview.png)
-
-:::tip
-Choose an ability that appears frequently and consistently in the rotation. Good anchor choices are filler abilities or abilities that mark the start of a priority sequence.
-:::
-
----
+- **GCD abilities** — These abilities trigger the global cooldown in-game, displayed as icons in a horizontal row
+- **Off-GCD weaves** — Abilities used between GCDs, stacked above the GCD ability cast they were woven with
 
 ## Reading the Visualization
 
 Each row represents one **rotation cycle** — the abilities used between two consecutive uses of the anchor ability.
-
-![Rotation cycle breakdown](/screenshots/rotation-overview.png)
 
 ### Ability Icons
 
@@ -61,6 +44,10 @@ Each cycle displays key performance metrics:
 | EHPS     | Effective healing per second (shown only if healing occurred) |
 | Crit     | Critical hit percentage for the cycle                         |
 | Duration | Length of the cycle in seconds                                |
+
+## Cast Timing
+
+The time between GCD ability casts is displayed under each entry in the rotation.
 
 ---
 

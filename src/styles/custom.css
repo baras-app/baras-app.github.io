@@ -92,6 +92,13 @@ a.site-title {
   border: 2px solid var(--sl-color-gray-3);
 }
 
+/* Center images in documentation content */
+.sl-markdown-content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Downloads section anchor styling */
 #downloads {
   scroll-margin-top: 5rem;
