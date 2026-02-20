@@ -180,12 +180,5 @@ The timer list shows all timers for the current encounter. Each row displays:
 
 Click a timer row to expand and edit its settings.
 
----
 
-## Tips
 
-- Use **Show at** for long cooldown timers (e.g., 3-minute enrage) to avoid clutter
-- Use **Chains To** for predictable sequential mechanics instead of multiple Combat Start timers with offsets
-- Set **Cancel On** to clean up timers that become irrelevant (e.g., cancel "Add Spawn" timer when add dies)
-- Use **Difficulties** to have different timers for Story vs Master mode mechanics
-- Use **Repeats** for mechanics that happen multiple times at regular intervals after the initial trigger

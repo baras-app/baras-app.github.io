@@ -67,11 +67,4 @@ Changes to overlay positions, enabled state, and appearance are **not** automati
 - The last active profile is remembered across app restarts
 - If no profiles exist, BARAS uses default settings
 
----
 
-## Tips
-
-- Create role-specific profiles: "Tank", "Healer", "DPS" with different overlay layouts
-- Use the header dropdown for fast switching between pulls when you swap roles
-- Create a minimal "Farming" profile with just personal stats for solo content
-- Save a "Clean" profile with default positions as a reset point

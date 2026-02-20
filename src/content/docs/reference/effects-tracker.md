@@ -205,15 +205,5 @@ Click an effect row to expand and edit its settings.
 
 Use the search box to filter effects by name, ID, or display target.
 
----
 
-## Tips
 
-- Use **Effect Applied** trigger for buffs and debuffs that have a clear start
-- Use **Ability Cast** trigger for cooldowns and procs that trigger on ability use
-- Enable **Fixed Duration** for cooldowns to prevent early expiration when buffs are consumed
-- Use **Duration Affected by Alacrity** for abilities whose cooldowns scale with your alacrity stat
-- Set **Show at** for long-duration effects to reduce overlay clutter
-- Use **Refresh Abilities** when multiple abilities can extend an effect's duration
-- Use **DOT Tracker** display target when tracking effects on multiple enemy targets
-- Use **Raid Frames** display target for HOTs and effects you apply to group members

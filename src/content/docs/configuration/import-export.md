@@ -88,6 +88,3 @@ BARAS can import timers and effects from **StarParse XML exports**, making it ea
 
 The import preview shows the count of items that will be imported before you confirm.
 
-:::tip
-After importing, check the Encounter Builder and Effects Tracker to verify the imported items and adjust any settings that may need fine-tuning.
-:::
