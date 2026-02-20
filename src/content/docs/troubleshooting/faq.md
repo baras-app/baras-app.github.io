@@ -3,12 +3,20 @@ title: FAQ
 description: Frequently asked questions about BARAS.
 ---
 
-## Setup
+## General
 
 <details>
 <summary>What operating systems does BARAS support?</summary>
 
 Windows, macOS, and Linux (Wayland/X11).
+
+</details>
+
+<details>
+<summary>Is this against the SWTOR Terms of Service?</summary>
+
+No BARAS is an external application that only reads data from combat logs on your computer. It functions the same as tools like Starparse and ORBS, which
+have been used by the community for over a decade.
 
 </details>
 

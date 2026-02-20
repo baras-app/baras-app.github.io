@@ -5,7 +5,7 @@ description: Import and export encounter definitions, and migrate data from Star
 
 ## Importing & Exporting Custom Timers and Effects
 
-BARAS supports importing and exporting encounter definitions as TOML files, and importing timers and effects from StarParse XML exports.
+BARAS supports importing and exporting encounter definitions as TOML files. For migrating from StarParse, see [Switching from StarParse](/getting-started/switching-from-starparse).
 
 ---
 
@@ -61,30 +61,5 @@ Click **Import** to apply the changes, or **Cancel** to discard.
 Replacing items overwrites their existing definitions. If you've customized a timer that's being replaced, your changes will be lost. Export your current definitions first if you want a backup.
 :::
 
----
 
-## StarParse Import
-
-BARAS can import timers and effects from **StarParse XML exports**, making it easy to migrate your existing setup.
-
-![StarParse import](/screenshots/starparse-import.png)
-
-### How to Import
-
-1. In StarParse, export your timers/overlays as XML
-2. In BARAS, go to the **Settings** tab
-3. Find the **Import** section
-4. Click **Import StarParse XML...**
-5. Select your exported XML file
-6. Review the preview showing what will be imported
-7. Click **Import** to apply
-
-### What Gets Imported
-
-| StarParse Feature | BARAS Equivalent |
-| ----------------- | ---------------- |
-| Timers | Encounter timers |
-| Effects/Overlays | Effect tracker entries |
-
-The import preview shows the count of items that will be imported before you confirm.
 

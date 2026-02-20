@@ -29,6 +29,7 @@ export default defineConfig({
           items: [
             { label: "Installation", slug: "getting-started/installation" },
             { label: "Quick Start", slug: "getting-started/quick-start" },
+            { label: "Switching from StarParse", slug: "getting-started/switching-from-starparse" },
             {
               label: "Tutorials",
               items: [
@@ -75,6 +76,7 @@ export default defineConfig({
           label: "Troubleshooting",
           items: [{ label: "FAQ", slug: "troubleshooting/faq" }],
         },
+        { label: "Contact", slug: "contact" },
       ],
     }),
   ],
