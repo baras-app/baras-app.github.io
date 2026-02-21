@@ -38,6 +38,7 @@ export default defineConfig({
             {
               label: "Tutorials",
               items: [
+                { label: "Customizing Overlays", slug: "getting-started/tutorials/customizing-overlays" },
                 { label: "Creating a Profile", slug: "getting-started/tutorials/creating-a-profile" },
                 { label: "Setting up Raid HOTs", slug: "getting-started/tutorials/setting-up-raid-hots" },
                 { label: "Tracking Effects", slug: "getting-started/tutorials/tracking-effects" },
