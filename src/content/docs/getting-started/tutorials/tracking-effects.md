@@ -28,7 +28,7 @@ First we will will create an effect with a new effect with the name **Sin Tank -
 
 #### Configuring the Effect
 
-![Weakened configuration](/screenshots/tutorial-effects/effects-create.png)
+![Weakened configuration](/screenshots/tutorial-effects/effect-weakened.png)
 
 In the UI we must put deliberate thought into how the effect is configured.
 
