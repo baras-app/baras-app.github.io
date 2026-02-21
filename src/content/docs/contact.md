@@ -11,7 +11,7 @@ Open an issue on [GitHub](https://github.com/baras-app/baras/issues).
 
 ### Discord
 
-<!-- TODO: Add your Discord username/tag here -->
+Join the [BARAS Discord](https://discord.gg/zmtkYkhSM4b) for help, discussion, and updates.
 
 ### Email
 

@@ -18,6 +18,11 @@ export default defineConfig({
       },
       social: [
         {
+          icon: "discord",
+          label: "Discord",
+          href: "https://discord.gg/zmtkYkhSM4b",
+        },
+        {
           icon: "github",
           label: "GitHub",
           href: "https://github.com/baras-app/baras",
