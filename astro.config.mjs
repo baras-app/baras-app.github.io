@@ -20,7 +20,7 @@ export default defineConfig({
         {
           icon: "discord",
           label: "Discord",
-          href: "https://discord.gg/zmtkYkhSM4b",
+          href: "https://discord.gg/zmtkYkhSM4",
         },
         {
           icon: "github",
@@ -34,15 +34,33 @@ export default defineConfig({
           items: [
             { label: "Installation", slug: "getting-started/installation" },
             { label: "Quick Start", slug: "getting-started/quick-start" },
-            { label: "Switching from StarParse", slug: "getting-started/switching-from-starparse" },
+            {
+              label: "Switching from StarParse",
+              slug: "getting-started/switching-from-starparse",
+            },
             {
               label: "Tutorials",
               items: [
-                { label: "Customizing Overlays", slug: "getting-started/tutorials/customizing-overlays" },
-                { label: "Creating a Profile", slug: "getting-started/tutorials/creating-a-profile" },
-                { label: "Setting up Raid HOTs", slug: "getting-started/tutorials/setting-up-raid-hots" },
-                { label: "Tracking Effects", slug: "getting-started/tutorials/tracking-effects" },
-                { label: "Creating Custom Timers", slug: "getting-started/tutorials/creating-custom-timers" },
+                {
+                  label: "Customizing Overlays",
+                  slug: "getting-started/tutorials/customizing-overlays",
+                },
+                {
+                  label: "Creating a Profile",
+                  slug: "getting-started/tutorials/creating-a-profile",
+                },
+                {
+                  label: "Setting up Raid HOTs",
+                  slug: "getting-started/tutorials/setting-up-raid-hots",
+                },
+                {
+                  label: "Tracking Effects",
+                  slug: "getting-started/tutorials/tracking-effects",
+                },
+                {
+                  label: "Creating Custom Timers",
+                  slug: "getting-started/tutorials/creating-custom-timers",
+                },
               ],
             },
           ],
