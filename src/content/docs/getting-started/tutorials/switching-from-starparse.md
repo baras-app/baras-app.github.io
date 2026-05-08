@@ -40,7 +40,7 @@ BARAS can import timers and effects from **StarParse XML exports**.
 | StarParse Feature | BARAS Equivalent       |
 | ----------------- | ---------------------- |
 | Timers            | Encounter timers       |
-| Effects/Overlays  | Effect tracker entries |
+| Discipline Timers | Effect tracker entries |
 
 The import preview shows the count of items that will be imported before you confirm.
 

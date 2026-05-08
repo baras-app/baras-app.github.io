@@ -8,15 +8,17 @@ description: Frequently asked questions about BARAS.
 <details>
 <summary>What operating systems does BARAS support?</summary>
 
-Windows, macOS, and Linux (Wayland/X11).
+Windows, macOS, and most modern Linux distributions.
 
 </details>
 
 <details>
 <summary>Is this against the SWTOR Terms of Service?</summary>
 
-No BARAS is an external application that only reads data from combat logs on your computer. It functions the same as tools like Starparse and ORBS, which
-have been used by the community for over a decade.
+No. BARAS is an external application that only reads data from combat log files. It does not directly interact
+with the game client.
+
+It functions in the same manner as tools like Starparse and ORBS, which have been used by the community for over a decade.
 
 </details>
 
@@ -32,10 +34,25 @@ BARAS only interacts with the following external services and file directories.
 - The log directory set by the user
 - The application configuration directory
 
+**Process monitoring:**
+
+- The "auto-hide when not live" feature monitors evaluates if `swtor.exe` is running in the process manager
+
 **External services:**
 
-- **GitHub** — BARAS checks once on application start for a new version.
+- **GitHub** — BARAS checks once on application start for available updates.
 - **Parsely.io** — The user can choose to upload specific files/encounters to Parsely.
+
+</details>
+
+<details id="unsigned-warnings">
+<summary>I get warnings that this application isn't trusted on Windows/macOS. Why?</summary>
+
+Microsoft and Apple will display warning messages if an application doesn't have a code-signing certificate. This is a
+common security practice to ensure the downloaded file is from the actual software developer.
+
+However, code signing certificates cost anywhere from $100-300 dollars per year to purchase and maintain. Since this is a
+small, non-commercial project maintained by a single developer I am not able to maintain code-signing certificates.
 
 </details>
 
@@ -75,13 +92,6 @@ The best solution is to attempt to damage all bosses at least once during the fi
 <summary>My timers seem to be firing too early or too late. Why?</summary>
 
 Boss ability casts and mechanics can be slightly delayed based on target changes or movement animations. This is out of the parser's control.
-
-</details>
-
-<details>
-<summary>All timers seem to be X seconds off. What's going on?</summary>
-
-If there is a consistent discrepancy, it's likely due to system clock drift. BARAS does not resolve the difference between the server time and the system's local time. The user is responsible for keeping their clock in sync.
 
 </details>
 

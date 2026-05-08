@@ -5,57 +5,84 @@ description: How to get BARAS set up and start parsing for SWTOR
 
 ## Setting a Log Directory
 
-Upon opening the application, BARAS will ask you to set a default log directory if the application is
-not able to find any combat logs.
+Upon first launching BARAS, you must set the combat log directory.
 
-![No Log files found image](/images/quick-start-1.png)
+1. Ensure combat logging is enabled in SWTOR:
+   - In-game: Preferences > Combat Logging > Enable Combat Logging
+2. The default location is:
+   - **Windows:** `Documents\Star Wars - The Old Republic\CombatLogs`
+   - **Linux (Steam):** `~/.steam/steam/steamapps/compatdata/1286830/pfx/drive_c/users/steamuser/Documents/Star Wars - The Old Republic'/CombatLogs`
+   - **macOS:** `todo`
 
-Click the either the settings hyperlink or the ⚙️ in top right corner to open the application's global settings menu.
+![](/images/first-launch/01-log-directory-setup)
 
-![file-selection](/images/quick-start-2.png)
+You can set the log directory in the **applications settings** window. This can be accessed by:
 
-Select your SWTOR Combat Logs directory. BARAS will automatically detect and begin parsing ang log file.
+1. Clicking the blue hyperlinked `set log directory` text
+2. OR cliking the &#9881; icon in the top-right to open the **application settings** menu
 
-### Live Mode
+From this menu, you can set the location of the SWTOR combat logs
 
-![Live Mode](/images/quick-start-3.png)
+![](/images/first-launch/02-log-directory-modal)
 
-A green dot 🟢 next to the character name at the top of the applicatioin indicates that BARAS is actively
-monitoring the latest file in the directory and will parse new data as it appears.
+Once your log directory is set, the application will automatically parse the latest log file in the directory. You will see a green visual
+indicator that the app is "live" in the top-right corner of the header bar.
 
-## Setting Up Overlays
+The application will always detect the newest log file in the directory and parse it without need for user interaaction.
 
-## Enabling Overalys
+## Application Navigation
 
-Navigate to the **Overlays** tab in order to view overlays options.
+![](/images/first-launch/03-header-navigation)
 
-By default all overlays are disabled. Click any overlay button to enable it. Once at least one overlay is enabled
-you can toggle it's visiblity state by clicking **Hidden**. You should see the button change to visible.
+1. Overlay controls. Toggle visibility, lock/unlock the overlays, rearrange raid frames, and clear raid frames.
+2. Overlay profile. Shows active profile. Click this element to switch between profiles.
+3. Overlay customization menu. Opens a menu that manages overlay profiles and cutomizationo options.
+4. Navigation pills. Navigates between the major pages of the app.
+5. Log file menu. Open a window for selecting prior log files.
+6. Application settings. Opens a menu for global application settings.
+7. Current session info. Shows information about the active characte.
+8. Parsely upload button
+9. Operation timer control.
+10. Alacrity/latency input.
+11. Raid notes selection.
+12. Overlay auto-hide controls.
+13. Changelog and links to resources.
 
-![Overlays tab with enable buttons](/screenshots/overlays-tab.png)
+## Enabling Overlays
 
-## Moving Overlays
+![](/images/first-launch/05-enabling-overlays)
 
-Click the **Locked** button in order to toggle **Move Mode**. Once in move mode all enabled overlays
-will change their appearance to semi-transparent with a grey border.
+1. Navigate to the **Overlays** control page via the navigation pill in the application header.
+2. Click on the toggle button for a specific overlay to enable it. By default, overlays will appear in the top-left corner of
+   the active monitor.
+3. Global overlay visibility can be toggled either via the 👁 button in the header bar or the **Hidden/Visible** button on the overlay control page.
+4. A prompt will appear in the application header prompting to save your changes to the current overlay profile. Changes must
+   be saved in order to persist on application restart.
 
-Click anywayer on the overlay to drag it to the desired posistion. Click and drag the handle in the bottom right corner to resize.
+## Adjusting Overlays
 
-![Overlays in move mode](/screenshots/overlays-move-mode.png)
+![](/images/first-launch/06-overlay-movement)
 
-:::note
-Overlay posistions will not save until you exit move mode.
-:::
+To ajust overlay settings:
 
-## Customizing Overlays
+1. Toggle **Movement Mode** by clicking the lock button.
+2. In movement-mode, you can click and drag a window to the desired screen posistion. Overlays will automatically snap to the
+   nearest 10 pixel-increment. Resize overlays by dragging the bottom right corner.
 
-Overlay's appearance and settings can be customzied by clicking the **Settings** button
-at the top left of overlay page.
+## Next Steps
 
-Overlay profiles can also be set here.
+You're all set to start parsing! BARAS should work well out-of-the-box with sensible defaults. But there are many
+advanced feature and configuration options to explore in order get the full value out of the app. Here are some things
+you can check out next:
 
-![Overlay settings panel](/screenshots/overlays-tab.png)
+Customize your overlay setup
 
-:::note
-Changes will only persist if you click save
-:::
+Learn how to manage overlay profiles
+
+Setup Raid Frames for HOTS tracking
+
+Learn about the effects tracking system
+
+Explore how the encounter builder enables custom timers and definitions
+
+Configure global hotkey shortcuts and other application settings

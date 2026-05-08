@@ -11,6 +11,23 @@ export default defineConfig({
       description: "Battle Analysis and Raid Assessment System",
       favicon: "/favicon.ico",
       customCss: ["./src/styles/custom.css"],
+      head: [
+        {
+          tag: "script",
+          content: `
+            function openTargetDetails() {
+              if (!location.hash) return;
+              const el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+              if (el && el.tagName === 'DETAILS') {
+                el.open = true;
+                el.scrollIntoView();
+              }
+            }
+            addEventListener('hashchange', openTargetDetails);
+            addEventListener('DOMContentLoaded', openTargetDetails);
+          `,
+        },
+      ],
       // Dark mode only - no theme toggle
       components: {
         ThemeProvider: "./src/components/ThemeProvider.astro",
@@ -33,11 +50,7 @@ export default defineConfig({
           label: "Getting Started",
           items: [
             { label: "Installation", slug: "getting-started/installation" },
-            { label: "Quick Start", slug: "getting-started/quick-start" },
-            {
-              label: "Switching from StarParse",
-              slug: "getting-started/switching-from-starparse",
-            },
+            { label: "First Launch", slug: "getting-started/quick-start" },
             {
               label: "Tutorials",
               items: [
@@ -60,6 +73,10 @@ export default defineConfig({
                 {
                   label: "Creating Custom Timers",
                   slug: "getting-started/tutorials/creating-custom-timers",
+                },
+                {
+                  label: "Switching from StarParse",
+                  slug: "getting-started/tutorials/switching-from-starparse",
                 },
               ],
             },
