@@ -15,10 +15,12 @@ Windows, macOS, and most modern Linux distributions.
 <details>
 <summary>Is this against the SWTOR Terms of Service?</summary>
 
-No. BARAS is an external application that only reads data from combat log files. It does not directly interact
-with the game client.
+No. BARAS is an external application that only reads data from combat log files. All information in the combat logs is intentionally offered
+by the developers for the player to use.
 
-It functions in the same manner as tools like Starparse and ORBS, which have been used by the community for over a decade.
+BARAS is not a mod. It does not read information from SWTOR or modify the application in any way. There is no direct interaction between BARAS and the SWTOR game client.
+
+It uses the exact same data available to other parsing tools, like Starparse and ORBS, which have been used by the community for over a decade.
 
 </details>
 
@@ -63,35 +65,38 @@ small, non-commercial project maintained by a single developer I am not able to 
 <details>
 <summary>SWTOR crashed — will timers still run?</summary>
 
-Maybe. BARAS requires the following information to be present in the log file to process properly:
-
-1. The current area
-2. An initial discipline changed event to identify the local player
-
-If you crash mid-raid a new log file is created without an area entered event. It's recommended you exit and re-enter the area you are currently in. If incorrect information still appears on the application session page, you will have to re-log to reset the file.
+It's best to either reset combat logging or log out and log back in when a crash occurs. The game will create a file that causes difficulties identifying the local player and current area after a game crash or disconnection.
 
 </details>
 
 <details>
 <summary>Do timers continue working even if I die?</summary>
 
-Yes!
+Yes. Even fights with troublesome behavior should have special handling to ensure that in-combat deaths are handled properly.
 
 </details>
 
 <details>
 <summary>Certain timers don't seem to be showing up, even though other timers are working in the same fight. Why?</summary>
 
-If the timers are based on when a boss NPC activates an ability, SWTOR does not always properly display `AbilityActivated` events for all players. In multi-boss encounters especially, players that never damage or draw aggro from a specific boss may not have the events that trigger these timers recorded in their logs.
+The most common reason for this to occur is that `AbilityActivated` events for NPCs will not appear in the logs until the local player (you) direct casts an ability on that NPC.
 
-The best solution is to attempt to damage all bosses at least once during the fight. This may or may not work but seems to improve the chances of timers appearing.
+Any timers based on boss ability casts are susceptible to this issue. It is prevalent in multi-boss encounters and when the player is a healer that doesn't target the boss.
+
+Other known issues include:
+
+- Activity is not logged if the boss is in stealth
+- Some instances have distance mechanics, such as being trapped in the Styrak nightmare, that interfere with event logging
 
 </details>
 
 <details>
-<summary>My timers seem to be firing too early or too late. Why?</summary>
+<summary>Timers seem to be firing too early or too late or de-syncing. Why?</summary>
 
-Boss ability casts and mechanics can be slightly delayed based on target changes or movement animations. This is out of the parser's control.
+Boss ability casts and mechanics can be slightly delayed based on target changes, movement animations, and their ability priority order. For example, Propagator Core has around 5 abilities with the same priority value
+that can be off-cooldown at the same time. In this case the next ability cast is randomly chosen.
+
+Standard timers are not able to predict this. BARAS has an experimental Ability Queue feature that attempts to visualize the boss' ability cool downs and predict the next cast.
 
 </details>
 
