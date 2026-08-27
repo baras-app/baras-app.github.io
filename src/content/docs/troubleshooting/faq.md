@@ -15,10 +15,17 @@ Windows, macOS, and most modern Linux distributions.
 <details>
 <summary>Is this against the SWTOR Terms of Service?</summary>
 
-No. BARAS is an external application that only reads data from combat log files. All information in the combat logs is intentionally offered
+No. BARAS is an external application that only reads data from combat log files. All information in the combat logs has been intentionally offered
 by the developers for the player to use.
 
-BARAS is not a mod. It does not read information from SWTOR or modify the application in any way. There is no direct interaction between BARAS and the SWTOR game client.
+BARAS is not a mod. BARAS does **NOT**:
+
+- read information from the game's memory
+- modify game files
+- intercept communications between the game client and the sever
+- simulate user input to the game.
+
+**There is no direct interaction between BARAS and the SWTOR game client.** Everything in BARAS is driven via the combat logs.
 
 It uses the exact same data available to other parsing tools, like Starparse and ORBS, which have been used by the community for over a decade.
 
@@ -27,23 +34,25 @@ It uses the exact same data available to other parsing tools, like Starparse and
 <details>
 <summary>How does BARAS interact with my machine? Is it safe to use?</summary>
 
-BARAS is an open source project and the source code is available on GitHub for anyone to review.
+BARAS is an open-source project publicly hosted on GitHub. There is no telemetry or mechanisms to collect user data.
 
-BARAS only interacts with the following external services and file directories.
+BARAS' interaction with your system is limited to the following:
 
 **Directories accessed:**
 
-- The log directory set by the user
-- The application configuration directory
+- The SWTOR combat log directory set by the user
+- The application's own configuration directory
 
-**Process monitoring:**
+**System monitoring:**
 
-- The "auto-hide when not live" feature monitors evaluates if `swtor.exe` is running in the process manager
+- The "auto-hide when not live" feature evaluates if `swtor.exe` is running in the process manager
+- OCR will screen capture the region underneath the raid frames overlay upon user input.
 
 **External services:**
 
 - **GitHub** — BARAS checks once on application start for available updates.
 - **Parsely.io** — The user can choose to upload specific files/encounters to Parsely.
+- **OCR model download** - when choosing to use OCR to auto-capture raid frame names, BARAS will download 12mb of OCR models from HuggingFace verified by a SHA-256 hash.
 
 </details>
 
@@ -54,7 +63,7 @@ Microsoft and Apple will display warning messages if an application doesn't have
 common security practice to ensure the downloaded file is from the actual software developer.
 
 However, code signing certificates cost anywhere from $100-300 dollars per year to purchase and maintain. Since this is a
-small, non-commercial project maintained by a single developer I am not able to maintain code-signing certificates.
+small, non-commercial project maintained by a single developer I am not able to pay for code-signing certificates.
 
 </details>
 
